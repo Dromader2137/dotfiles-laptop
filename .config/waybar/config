@@ -1,0 +1,48 @@
+{
+    "height": 30, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["battery", "network"],
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%d/%m/%y}"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "",
+            "2": "󰈹",
+            "3": "",
+            "4": "󰓓",
+            "5": "󰙨",
+        },
+        "persistent_workspaces":{
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+        },
+        "all-outputs": true,
+        "active-only": false,
+        "sort-by-number": true
+    },
+    "battery": {
+        "interval" : 5,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "network": {
+        "format-wifi": "󰖩",
+        "format-disconnected": "󰖪",
+    },
+}
